@@ -1,0 +1,12 @@
+{
+  "name": "de-spiegel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names SERVER,SCREEN,TABLET --prefix-colors cyan,blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix screen\" \"npm run dev --prefix tablet\"",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix screen && npm install --prefix tablet"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
